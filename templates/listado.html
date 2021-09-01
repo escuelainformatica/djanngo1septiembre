@@ -1,0 +1,12 @@
+<table border="1">
+    {% for modelo in modelos %}
+    <tr>
+        <td>{{ modelo.id }} </td>
+        <td>{{ modelo.id1 }} </td>
+        <td>{{ modelo.id2 }} </td>
+        <td><a href="/formeditar/{{ modelo.id }}">Editar</a> </td>
+    <td><a href="/formborrar/{{ modelo.id }}" onclick="return confirm('Are you sure?')">Borrar</a> </td>
+    </tr>
+    {% endfor %}
+</table>
+<a href="/form/">Insertar un nuevo modelo</a>

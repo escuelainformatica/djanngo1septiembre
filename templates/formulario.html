@@ -1,0 +1,12 @@
+<form method="post">
+    {% csrf_token %}
+    <input type="text" name="id1" value="{{ modelo.id1 }}"/><br/>
+    <input type="text" name="id2" value="{{ modelo.id2 }}"/><br/>
+    {% if mensaje == '' %}
+        <input type="submit">
+    {% else %}
+        <input type="submit" disabled="disabled">
+    {% endif %}
+<br/><br/>
+    <div style="background-color: orange">{{ mensaje }}</div>
+</form>
