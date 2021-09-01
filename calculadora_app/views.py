@@ -7,7 +7,7 @@ from calculadora_app.models import ModeloEjemplo
 
 class ClaseListado(View):
     def get(self,request):
-        contexto={'modelos':ModeloEjemplo.objects.all()}
+        contexto={'modelos':ModeloEjemplo.objects.all(),'titulo':'listado de modelos'}
         return render(request,'listado.html',contexto)
 
 class ClaseBorrar(View):
